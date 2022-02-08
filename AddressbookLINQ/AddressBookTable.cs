@@ -46,13 +46,28 @@ namespace AddressbookLINQ
             }
         }
 
-        //UC4:- Ability to edit existing contact person using their name
+        //UC4//
         public void EditExistingContact(string firstName, string lastName, string column, string newValue)
         {                                                                  
             DataRow contact = table.Select("FirstName = '" + firstName + "' and LastName = '" + lastName + "'").FirstOrDefault();
             contact[column] = newValue;
             Console.WriteLine("Record successfully Edited");
             GetAllContacts();
+        }
+        //UC5//
+        public void DeleteContact(string firstName, string lastName)
+        {
+            try
+            {
+                DataRow contact = table.Select("FirstName = '" + firstName + "' and LastName = '" + lastName + "'").FirstOrDefault();
+                table.Rows.Remove(contact);
+                Console.WriteLine("Record Successfully Deleted");
+                GetAllContacts();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
