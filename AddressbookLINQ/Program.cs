@@ -13,6 +13,7 @@ namespace AddressbookLINQ
             addressBookTable.GetAllContacts();
             addressBookTable.EditExistingContact("ak", "ku", "PhoneNumber", "1234566");
             addressBookTable.RetrieveByCityOrState("hnk", "ap");
+            addressBookTable.CountByCityOrState("ha", "hyd");
         }
     }
 }
