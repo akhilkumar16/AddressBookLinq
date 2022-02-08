@@ -11,9 +11,8 @@ namespace AddressbookLINQ
             // UC 1 Create a new table
             AddressBookTable addressBookTable = new AddressBookTable();
             addressBookTable.GetAllContacts();
-            // UC4
             addressBookTable.EditExistingContact("ak", "ku", "PhoneNumber", "1234566");
-
+            addressBookTable.RetrieveByCityOrState("hnk", "ap");
         }
     }
 }
