@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 
 namespace AddressbookLINQ
 {
@@ -9,6 +10,8 @@ namespace AddressbookLINQ
             Console.WriteLine("Address Book Linq");
             // UC 1 Create a new table
             AddressBookTable addressBookTable = new AddressBookTable();
+            addressBookTable.GetAllContacts();
+
         }
     }
 }
